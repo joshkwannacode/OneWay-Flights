@@ -84,9 +84,7 @@ function FrontPage() {
       history.push("/Main")
     };
 
-    // destinationName.length > 1 || departureName.length > 1
-    //   ? history.push("/MultipleChoicePage")
-    //   : history.push("/Main");
+  
   };
 
   return (
