@@ -74,11 +74,12 @@ function FrontPage() {
     console.log(departureName);
     console.log(destinationName);
 
-    if (destinationName.length > 1 || departureName.length > 1) {
-      history.push("/MultipleChoicePage")
-    }
-    else if (destinationName === undefined || departureName === undefined) {
+    if (destinationName === undefined || departureName === undefined) {
       history.push("/NoResult")
+    }
+
+    else if (destinationName.length > 1 || departureName.length > 1) {
+      history.push("/MultipleChoicePage")
     }
     
     else {
