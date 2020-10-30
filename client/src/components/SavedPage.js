@@ -13,7 +13,8 @@ import {
     CloseButtonImg,
     PlaneImg,
     MainButton,
-    DeleteButton
+    DeleteButton,
+    LoadingScreenDiv,
 } from "./Styled"
 import PlaneSvg from "../assets/plane.svg";
 import closeIcon from "../assets/closeIcon.svg";
@@ -94,7 +95,7 @@ function SavedPage() {
 
     return (
         <>
-        {isLoading?<LoadingPage/>:
+        {isLoading?<LoadingScreenDiv><LoadingPage/></LoadingScreenDiv>:
         <SavePageMain>
             <MainH2>Welcome {user.nickname}</MainH2>
             <MainH4>Global Saved List:</MainH4>
