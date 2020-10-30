@@ -6,13 +6,13 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
-import { useAuth0 } from "@auth0/auth0-react"
-import {useHistory} from "react-router-dom"
+import { useAuth0 } from "@auth0/auth0-react";
+import {useHistory} from "react-router-dom";
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import SearchIcon from '@material-ui/icons/Search';
-import LogoIcon from "../assets/icon.png"
+import LogoIcon from "../assets/icon.png";
 
 const LoginButton = ()=>{
   const {loginWithRedirect,logout} = useAuth0();
@@ -30,16 +30,16 @@ const LoginButton = ()=>{
   };
 
   const handleLogin=()=>{
-    loginWithRedirect()
-  }
+    loginWithRedirect();
+  };
   const handleLogout=()=>{
-    logout()
+    logout();
     setAnchorEl(null);
-  }
+  };
 const handleSavedPage =()=>{
   history.push("/SavedPage")
   setAnchorEl(null);
-}
+};
   return(
     <>
       {!isAuthenticated?

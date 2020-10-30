@@ -4,7 +4,7 @@ import { destinationApi, departureApi } from "../Api";
 import { IdContext } from "./IdContext";
 import { useHistory } from "react-router-dom";
 import { FrontPageMain, SearchFlightButton, FrontPageH2,LoadingScreenDiv} from "./Styled";
-import LoadingPage from "./Loading+NoResult/LoadingPage"
+import LoadingPage from "./Loading+NoResult/LoadingPage";
 
 function FrontPage() {
   const [departureInput, setDepartureInput] = useState("");
@@ -65,7 +65,7 @@ function FrontPage() {
   };
 
   const handleSubmit = async (event) => {
-    setIsLoading(true)
+    setIsLoading(true);
     const departureName = await convertDeparture();
     console.log("handleSubmit");
     const destinationName = await convertDestination();
@@ -80,9 +80,6 @@ function FrontPage() {
     else {
       history.push("/Main")};
     
-    // destinationName.length > 1 || departureName.length > 1
-    //   ? history.push("/MultipleChoicePage")
-    //   : history.push("/Main");
   };
 
   return (

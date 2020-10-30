@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth0 } from "@auth0/auth0-react"
+import { useAuth0 } from "@auth0/auth0-react";
+import LoadingPage from "./Loading+NoResult/LoadingPage";
 import {
     SavePageMain,
     MainH2,
@@ -14,17 +15,17 @@ import {
     MainButton,
     DeleteButton
 } from "./Styled"
-import PlaneSvg from "../assets/plane.svg"
-import closeIcon from "../assets/closeIcon.svg"
+import PlaneSvg from "../assets/plane.svg";
+import closeIcon from "../assets/closeIcon.svg";
 const FlightData = props => {
     const { user } = useAuth0()
     const [buttonClick, setButtonClick] = useState(false);
     const handleClick = () => {
         setButtonClick(true)
-    }
+    };
     const handleClose = () => {
         setButtonClick(false)
-    }
+    };
 
     return (
         <>
@@ -72,10 +73,12 @@ function SavedPage() {
     const { user, getAccessTokenSilently } = useAuth0()
     const [savedData, setSavedData] = useState("")
     const token = getAccessTokenSilently();
+    const [isLoading, setIsLoading] = useState(true)
 
     axios.get('/savedInfo')
         .then(res => {
-            setSavedData(res.data)
+            setIsLoading(false);
+            setSavedData(res.data);   
         })
         .catch((error) => {
             console.log(error);
@@ -84,12 +87,14 @@ function SavedPage() {
         axios.delete('/savedInfo/' + id)
             .then(response => { console.log(response.data) });
 
-        setSavedData(savedData.filter(el => el._id !== id))
+        setSavedData(savedData.filter(el => el._id !== id));
     }
 
     let savedDataArr = Array.from(savedData)
 
     return (
+        <>
+        {isLoading?<LoadingPage/>:
         <SavePageMain>
             <MainH2>Welcome {user.nickname}</MainH2>
             <MainH4>Global Saved List:</MainH4>
@@ -107,8 +112,8 @@ function SavedPage() {
                     savedDataId={savedDataId}
                 />
             })}
-
-        </SavePageMain>
+        </SavePageMain>}
+        </>
     )
 }
 

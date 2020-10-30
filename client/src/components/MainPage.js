@@ -33,7 +33,7 @@ import {
 export default function MainPage(props) {
   const [quotesInfo, setQuotesInfo] = useState("");
   const [carrierInfo, setCarrierInfo] = useState("");
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [carrierName, setCarrierName] = useState("");
   const { departureId } = useContext(IdContext);
   const { destinationId } = useContext(IdContext);
@@ -81,7 +81,7 @@ export default function MainPage(props) {
         <p>Needs Login</p>
       )
     }
-  }
+  };
   const departureCity = JSON.stringify(departureId);
   const destinationCity = JSON.stringify(destinationId);
   let quotesDataArr = Array.from(quotesInfo);
