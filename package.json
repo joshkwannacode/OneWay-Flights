@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start nodemon server.js && start npm --cwd client start",
-    "start": "node server.js",
+    "start": "node server",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "heroku-prebuild": "npm install --prefix client && npm run-script build --prefix client"
   },
   "keywords": [],
