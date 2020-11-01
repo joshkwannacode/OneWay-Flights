@@ -237,7 +237,7 @@ background-color:white;
   height:12vh;
   box-shadow: 6px 7px 25px -14px rgba(0,0,0,0.78);
   &:hover {
-    box-shadow: 6px 4px 39px 9px rgba(0,0,0,0.75);
+    box-shadow: 6px 4px 30px 9px rgba(0,0,0,0.75);
   }
   @media(min-width:1100px){
   height:15vh;

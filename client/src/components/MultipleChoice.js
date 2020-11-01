@@ -70,7 +70,7 @@ export default function MultipleChoice() {
               </PlaceButton>
                 </PlaceButtonDiv>))}
 
-      <RetryButton onClick={retryHandleClick} >Retry</RetryButton>
+      <RetryButton onClick={retryHandleClick} >Search</RetryButton>
     </ChoicePageMainDiv>
     :<NoResult/>
   }
