@@ -21,33 +21,3 @@ button:focus {
 	outline: none !important;
 	outline-offset: none !important;
 }
-/* .dick {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.loading-screen {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 20vh;
-	height: 20vh;
-	border: 3px solid rgba(255, 255, 255, 0.3);
-	border-radius: 50%;
-	border-top-color: #52718d;
-	animation: spin 1s ease-in-out infinite;
-	-webkit-animation: spin 1s ease-in-out infinite;
-	margin-top: 30vh;
-}
-@keyframes spin {
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
-@-webkit-keyframes spin {
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-} */
