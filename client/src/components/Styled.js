@@ -621,7 +621,10 @@ cursor:pointer;
   }
 &:active{
     border:none;
+    box-shadow: none;
+    background-color:white;
   }
+
 @media(min-width:768px){
   font-size:3.5vw;
 }
