@@ -41,7 +41,14 @@ export default function MainPage(props) {
   const { departureDate } = useContext(IdContext);
   const { destinationCountry, departureCountry } = useContext(IdContext);
   const { user, isAuthenticated } = useAuth0();
-  const userName = user.nickname;
+  const userName =()=>{ 
+    if(isAuthenticated===true){return(user.nickname)}
+  else{
+    return(
+      0
+    )
+  };
+}
   const history = useHistory();
   const userId = () => {
     if (isAuthenticated === true) { return (user.sub) }

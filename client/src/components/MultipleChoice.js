@@ -52,7 +52,7 @@ export default function MultipleChoice() {
     <>
     {arrivalData.length>0?
     <ChoicePageMainDiv >
-      <ChoicePageH4>Search term too broad, please reclick both location then click Retry</ChoicePageH4>
+      <ChoicePageH4>Search term too broad, please reclick both location then click Search</ChoicePageH4>
       
       <ChoicePageH3>From</ChoicePageH3>
       {arrivalData.map((d) => (
