@@ -370,10 +370,13 @@ export const SaveButtonBorder = styled.div`
   @media(min-width:768px){
     margin-top:0vh;
   }
-  @media(min-width:1100px){
+  @media(min-width:1000px){
     margin-top:-4vh;
     height:15vh;
     width:7vw;
+  }
+  @media(min-width:1400px){
+    margin-top:-2.5vh;
   }
   @media(min-width:2400px){
   margin-top:-3.5vh;
