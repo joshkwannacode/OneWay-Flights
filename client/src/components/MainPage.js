@@ -85,7 +85,7 @@ export default function MainPage(props) {
         .then(res => console.log(res.data))
     } else {
       return (
-        <p>Needs Login</p>
+        console.log("needs login")
       )
     }
   };

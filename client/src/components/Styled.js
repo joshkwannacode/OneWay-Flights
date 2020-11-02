@@ -320,7 +320,7 @@ margin-left:-3vw;
 
 `
 export const DestinationCityInfo = styled.div`
-margin-right:10vw;
+margin-right:8vw;
 @media(min-width:1100px){
   margin-right:5.5vw;
   }
