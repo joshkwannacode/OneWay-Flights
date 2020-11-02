@@ -239,7 +239,7 @@ background-color:white;
   &:hover {
     box-shadow: 6px 4px 30px 9px rgba(0,0,0,0.75);
   }
-  @media(min-width:1100px){
+  @media(min-width:1000px){
   height:15vh;
     width:40vw;
   }
@@ -253,7 +253,7 @@ margin-left:18vw;
 margin-top:3vh;
 width:8vw;
 height:4vh;
-@media(min-width:1100px){
+@media(min-width:1000px){
   margin-top:4vh;
   height:7vh;
   width:14vw;
@@ -267,7 +267,7 @@ export const RowFormat = styled.div`
 `;
 
 export const CarrierName = styled.div`
-  @media(min-width:1100px){
+  @media(min-width:1000px){
   margin-left:1vw;
   margin-top:0.8vh;
   font-size:1vw;
@@ -296,7 +296,7 @@ margin-top:2vh;
 @media(min-width:425px){
   font-size:4vw;
 }
-@media(min-width:1100px){
+@media(min-width:1000px){
   font-size:3vw;
   }
 @media(min-width:1200px){
@@ -308,7 +308,7 @@ display:flex;
 flex-direction:row;
 margin-left:8vw;
 justify-content:space-between;
-@media(min-width:1100px){
+@media(min-width:1000px){
   font-size:1vw;
   }
 `
@@ -321,7 +321,7 @@ margin-left:-3vw;
 `
 export const DestinationCityInfo = styled.div`
 margin-right:8vw;
-@media(min-width:1100px){
+@media(min-width:1000px){
   margin-right:5.5vw;
   }
 `
@@ -334,7 +334,7 @@ export const CountryName2= styled.p`
 export const InfoBottom = styled.p`
 width:100vw;
 position:absolute;
-@media(min-width:1100px){
+@media(min-width:1000px){
   margin-left:-20vw;
   margin-top:0.8vh;
   font-size:1vw;
@@ -400,7 +400,7 @@ border-radius: 1vw;
   &:active{
     border:none;
   }
-  @media(min-width:1100px){
+  @media(min-width:1000px){
     font-size:1vw;
     width:4vw;
     height: 3.5vh;
@@ -412,7 +412,7 @@ export const Price = styled.p`
   color:white;
   font-size:3vw;
   margin-top:2.5vh;
-  @media(min-width:1100px){
+  @media(min-width:1000px){
     font-size:1vw;
     margin-top:3vh;
   }
