@@ -24,11 +24,7 @@ const port = process.env.PORT || 5001;
 //     algorithms: ['RS256']
 // });
 
-// app.use(jwtCheck);
 
-// app.get('/authorized', function (req, res) {
-//     res.send('Secured Resource');
-// })
 
 app.use(cors());
 app.use(express.json());
