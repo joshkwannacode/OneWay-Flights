@@ -249,7 +249,7 @@ export const PlanePic = styled.img`
 position:absolute;
 display:flex;
 flex-direction:row;
-margin-left:18vw;
+margin-left:20vw;
 margin-top:3vh;
 width:8vw;
 height:4vh;
@@ -320,7 +320,7 @@ margin-left:-3vw;
 
 `
 export const DestinationCityInfo = styled.div`
-margin-right:8vw;
+margin-right:12vw;
 @media(min-width:1000px){
   margin-right:5.5vw;
   }
