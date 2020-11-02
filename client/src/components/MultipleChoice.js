@@ -31,6 +31,11 @@ export default function MultipleChoice() {
     setDepartureName(placeName);
     console.log(departureId);
     console.log(departureIdArr);
+    if(count>=1 && count2>=1){
+      history.push("/Main");
+      setCount2(0);
+      setCount(0);
+    }
 
   };
   const handleClick2 = (placeId,placeName) => {
@@ -38,21 +43,19 @@ export default function MultipleChoice() {
     setDestinationName(placeName);
     setCount2(count2+1);
     console.log(destinationId);
-    
-  };
-  const retryHandleClick =()=>{
-    // if (destinationId.length === 0 && departureId.length=== 0) {
-      if(count>=1 && count2>=1){
+    if(count>=1 && count2>=1){
       history.push("/Main");
       setCount2(0);
       setCount(0);
     }
+    
   };
+
   return (
     <>
     {arrivalData.length>0?
     <ChoicePageMainDiv >
-      <ChoicePageH4>Search term too broad, please reclick both location then click Search</ChoicePageH4>
+      <ChoicePageH4>Search term too broad, please reclick both location</ChoicePageH4>
       
       <ChoicePageH3>From</ChoicePageH3>
       {arrivalData.map((d) => (
@@ -70,7 +73,7 @@ export default function MultipleChoice() {
               </PlaceButton>
                 </PlaceButtonDiv>))}
 
-      <RetryButton onClick={retryHandleClick} >Search</RetryButton>
+      
     </ChoicePageMainDiv>
     :<NoResult/>
   }
