@@ -25,9 +25,9 @@ export default function MultipleChoice() {
   let destinationIdArr = Array.from(destinationId);
   let departureIdArr = Array.from(departureId);
 
-  const handleClick = (placeId,placeName) => {
+  const handleClick = async (placeId,placeName) => {
     setDepartureId(placeId);
-    setCount(count+1);
+    await setCount(count+1);
     setDepartureName(placeName);
     console.log(departureId);
     console.log(departureIdArr);
@@ -38,12 +38,12 @@ export default function MultipleChoice() {
     }
 
   };
-  const handleClick2 = (placeId,placeName) => {
+  const handleClick2 = async (placeId,placeName) => {
     setDestinationId(placeId);
     setDestinationName(placeName);
-    setCount2(count2+1);
+    await setCount2(count2+1);
     console.log(destinationId);
-    if(count>=1 && count2>=1){
+    if(count>=1 || count2>=1){
       history.push("/Main");
       setCount2(0);
       setCount(0);
