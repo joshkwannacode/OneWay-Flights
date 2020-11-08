@@ -79,7 +79,8 @@ function SavedPage() {
     axios.get('/savedInfo')
         .then(res => {
             setIsLoading(false);
-            setSavedData(res.data);   
+            const filteredData = res.data.filter(id=>id.userName===user.nickname)
+            setSavedData(filteredData);   
         })
         .catch((error) => {
             console.log(error);
@@ -98,7 +99,7 @@ function SavedPage() {
         {isLoading?<LoadingScreenDiv><LoadingPage/></LoadingScreenDiv>:
         <SavePageMain>
             <MainH2>Welcome {user.nickname}</MainH2>
-            <MainH4>Global Saved List:</MainH4>
+            <MainH4>Saved List:</MainH4>
 
             {savedDataArr.map(a => {
                 const savedDataId = savedDataArr.find(

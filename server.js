@@ -7,34 +7,6 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5001;
 
-
-// var jwt = require('express-jwt');
-// var jwks = require('jwks-rsa');
-
-
-// var jwtCheck = jwt({
-//       secret: jwks.expressJwtSecret({
-//           cache: true,
-//           rateLimit: true,
-//           jwksRequestsPerMinute: 5,
-//           jwksUri: 'https://skyscanner-josh.us.auth0.com/.well-known/jwks.json'
-//     }),
-//     audience: 'https://express.sample',
-//     issuer: 'https://skyscanner-josh.us.auth0.com/',
-//     algorithms: ['RS256']
-// });
-
-// app.use(jwtCheck);
-
-// app.get('/authorized', function (req, res) {
-//     res.send('Secured Resource');
-// });
-
-// //BEFORE
-// app.post('/api/login', userController.login);
-// //AFTER
-// app.get('/auth/callback', userController.login);
-
 app.use(cors());
 app.use(express.json());
 
