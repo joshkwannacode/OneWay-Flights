@@ -3,7 +3,7 @@ import FrontPage from "./components/FrontPage";
 import MainPage from "./components/MainPage";
 import { IdContext } from "./components/IdContext";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Nav/NavBar";
 import MultipleChoicePage from "./components/MultipleChoice";
 import SavedPage from "./components/SavedPage";
 import NoResult from "./components/Loading+NoResult/NoResult"
@@ -17,8 +17,9 @@ function App() {
   const [destinationInfo, setDestinationInfo] = useState("");
   const [destinationCountry, setDestinationCountry] = useState("");
   const [departureCountry, setDepartureCountry] = useState("");
-  const [count, setCount] = useState(0)
-  const [count2, setCount2] = useState(0)
+  const [search, setSearch] = useState(false);
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
   return (
     <div>
       <Router>
@@ -38,7 +39,16 @@ function App() {
             setArrivalInfo,
             destinationInfo,
             setDestinationInfo,
-            count, setCount, count2, setCount2, departureCountry, setDepartureCountry, destinationCountry, setDestinationCountry,
+            count, 
+            setCount, 
+            count2, 
+            setCount2, 
+            departureCountry, 
+            setDepartureCountry, 
+            destinationCountry, 
+            setDestinationCountry,
+            search,
+            setSearch,
           }}
         >
           <NavBar />

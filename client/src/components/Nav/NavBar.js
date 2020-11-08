@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useContext} from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -12,7 +12,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import SearchIcon from '@material-ui/icons/Search';
-import LogoIcon from "../assets/icon.png";
+import NavSearchBar from "./NavSearchBar"
+import { IdContext } from "../IdContext";
 
 const LoginButton = ()=>{
   const {loginWithRedirect,logout} = useAuth0();
@@ -87,16 +88,43 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    
   },
 }));
 export default function NavBar() {
+  const {search, setSearch} = useContext(IdContext);
   const history = useHistory();
+  const [clickCount, setClickCount ] = useState(0);
+
+  function singleClick(event) {
+    setSearch(true);
+  }
+
+  function doubleClick(event) {
+    setSearch(false);
+  }
+
+  function clickHandler(event) {
+    event.preventDefault();
+      if (clickCount < 1) {   
+        singleClick(event.target);
+        setClickCount(clickCount+1)
+      } else {
+          doubleClick(event.target);
+          setClickCount(0);
+        }
+    }
+
   const handleHome=()=>{
     history.push("/")
   }
+
   const classes = useStyles();
   return (
-    <div>
+    <div style={{
+      background: "#0A0F39",
+      
+    }}>
       <div>
         <AppBar
           position="static"
@@ -108,16 +136,28 @@ export default function NavBar() {
           }}
         >
           <Toolbar>
-            <Typography variant="h6" className={classes.title} onClick={handleHome}>
+            <Typography variant="h6" className={classes.title} onClick={handleHome} style={{cursor:"pointer"}}>
               ONEWAY
             </Typography>
-            <IconButton color="inherit" aria-label="search" onClick={handleHome}>
+            <IconButton color="inherit" aria-label="search" onClick={clickHandler}>
               <SearchIcon />
             </IconButton>
             <LoginButton />
           </Toolbar>
         </AppBar>
       </div>
+      {search&&(
+        <div style={{
+          background: "#0A0F39",
+          fontFamily: "Roboto",
+          fontSize: "1vw",
+          fontWeight: "500",
+          height:"100%",
+        }}>
+        
+        <NavSearchBar/>
+        </div>
+      )}
     </div>
   );
 }

@@ -30,6 +30,11 @@ const port = process.env.PORT || 5001;
 //     res.send('Secured Resource');
 // });
 
+// //BEFORE
+// app.post('/api/login', userController.login);
+// //AFTER
+// app.get('/auth/callback', userController.login);
+
 app.use(cors());
 app.use(express.json());
 

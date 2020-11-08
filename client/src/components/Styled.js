@@ -203,7 +203,61 @@ export const AreaAndLabel = styled.div`
     flex-direction: column;
   }
 `;
-
+//Loading Screen
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+		-webkit-transform: rotate(360deg);
+	}
+`
+export const LoadingScreenDiv = styled.div`
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`
+export const LoadingScreen = styled.div`
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 20vh;
+	height: 20vh;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: #52718d;
+	animation: ${spin} 1s ease-in-out infinite;
+	-webkit-animation: ${spin} 1s ease-in-out infinite;
+	margin-top: 30vh;
+`
+//No Result Page
+export const NoResultDiv= styled.div`
+  /* background: #00E7DC; */
+  margin:0; 
+  padding:0; 
+  overflow:hidden;
+  background-image:url(${NoResult});
+  background-position:  top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+`
+export const NoResultH1 = styled.h1`
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  padding: 2em 0 0;
+  font-size:4vw;
+  @media(max-width:800px){
+    /* margin-top:-3vh; */
+    font-size:10vw;
+  }
+`
+export const NoResultSVG = styled.svg`
+  /* margin-top:-40vh; */
+  /* height: 100%;
+  width:100%; */
+`
 //main page
 export const MainPageStyle = styled.body`
   background-color: #F3F3F3;
@@ -570,7 +624,192 @@ export const DescTextarea = styled.textarea`
 margin-top:1vh;
 margin-bottom:3vh;
 `
+//NavBar
+export const NavSearchBarForm = styled.form`
+  margin-top: 1vh;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    
+  }
+`
+export const NavAreaAndLabel = styled.div`
+  @media(min-width:768px){
+  margin-bottom:1vh;
+}
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content:flex-start;
+  }
+`;
+export const NavSearchBarButton = styled.button`
+background: #262A51;
+border-radius: 1vw;
+width: 38vw;
+height: 5vh;
+font-size: 5vw;
+color: white;
+margin-left:30vw;
+margin-top:1vh;
+margin-bottom:1vh;
+border:none;
+@media(min-width:768px){
+  width:20vw;
+  height:3vh;
+  font-size:3vw;
+  margin-left:39vw;
+}
+@media (min-width: 1024px) {
+  margin-top:-25vh;
+}
+@media (min-width: 1200px) {
+  font-size: 1.1vw;
+  width:10vw;
+  height:5vh;
+  margin-top:-35vh;
+  margin-left:43vw;
+}
+`
+export const NavTextArea = styled.textarea`
+  height: 3vh;
+  resize: none;
+  width: 60vw;
+  border-radius: 1vw;
+  position:absolute;
+  display:flex;
+  margin-top:-6vw;
+  margin-left:19vw;
+  margin-bottom:3vh;
 
+  @media(min-width:768px){
+  margin-top:-2vw;
+  margin-bottom:4vh;
+  height:2vh;
+  border-radius: 0.5vw;
+}
+  @media (min-width: 1024px) {
+    position: static;
+    width: 28vw;
+    height: 3vh;
+    font-size: 1.3vw;
+    border-radius: 0.3vw;
+    margin-top: 1vh;
+    margin-left:2vw;
+    margin-right:3vw;
+  }
+  @media (min-width: 1200px) {
+  height:5vh;
+}
+  @media (min-width: 1440px) {
+    font-size: 1.1vw;
+  }
+  @media (min-width: 1800px) {
+    height: 5vh;
+  }
+  @media (min-width: 2200px) {
+    height: 6vh;
+  }
+  
+`;
+export const NavTextAreaLabel = styled.label`
+  color: white;
+  font-size: 5vw;
+  margin-left: 2vw;
+  @media (min-width: 425px) {
+    font-size: 3vw;
+  }
+  @media (min-width: 768px) {
+    font-size: 2vw;
+    margin-left:5vw;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.3vw;
+    margin-left:2vw;
+  }
+`;
+export const NavDateInput = styled.input.attrs({
+  type: "date",
+})`
+  height: 3vh;
+  resize: none;
+  width: 60vw;
+  border-radius: 1vw;
+  border: none;
+  position:absolute;
+  display:flex;
+  margin-top:-6vw;
+  margin-left:19vw;
+  margin-bottom:3vh;
+  @media(min-width:768px){
+    margin-top:-2vw;
+  margin-bottom:4vh;
+  height:2vh;
+  border-radius: 0.5vw;
+}
+  @media (min-width: 1024px) {
+    position: static;
+    width: 28vw;
+    height: 3vh;
+    font-size: 1.3vw;
+    border-radius: 0.3vw;
+    margin-top: 1vh;
+    margin-left:2vw;
+    margin-right:8vw;
+  }
+  @media (min-width: 1200px) {
+  height:5vh;
+}
+  @media (min-width: 1440px) {
+    font-size: 1.1vw;
+  }
+  @media (min-width: 1800px) {
+    height: 5vh;
+  }
+  @media (min-width: 2200px) {
+    height: 6vh;
+  }
+`;
+
+export const NavDateLabel = styled.label`
+  color: white;
+  font-size: 5vw;
+  margin-left: 2vw;
+
+  @media (min-width: 425px) {
+    font-size: 3vw;
+  }
+  @media (min-width: 768px) {
+    font-size: 2vw;
+    margin-left:5vw;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.3vw;
+    margin-left:2vw;
+  }
+`;
+export const NavLoadingScreenDiv = styled.div`
+  display: flex;
+	flex-direction: column;
+	margin-top:-20vh;
+	align-items: center;
+  justify-content:center;
+`
+export const NavLoadingScreen = styled.div`
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 10vh;
+	height: 10vh;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: #52718d;
+	animation: ${spin} 1s ease-in-out infinite;
+	-webkit-animation: ${spin} 1s ease-in-out infinite;
+  margin-top:10vh;
+`
 //Multiple Choice Page
 export const ChoicePageMainDiv = styled.div`
 display:flex;
@@ -657,58 +896,4 @@ cursor:pointer;
   height:6vh;
   width:15vw;
 }
-`
-//Loading Screen
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-		-webkit-transform: rotate(360deg);
-	}
-`
-export const LoadingScreenDiv = styled.div`
-  display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`
-export const LoadingScreen = styled.div`
-  display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 20vh;
-	height: 20vh;
-	border: 3px solid rgba(255, 255, 255, 0.3);
-	border-radius: 50%;
-	border-top-color: #52718d;
-	animation: ${spin} 1s ease-in-out infinite;
-	-webkit-animation: ${spin} 1s ease-in-out infinite;
-	margin-top: 30vh;
-`
-//No Result Page
-export const NoResultDiv= styled.div`
-  /* background: #00E7DC; */
-  margin:0; 
-  padding:0; 
-  overflow:hidden;
-  background-image:url(${NoResult});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-export const NoResultH1 = styled.h1`
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  padding: 2em 0 0;
-  @media(max-width:450px){
-    /* margin-top:-3vh; */
-    font-size:3vw;
-  }
-`
-export const NoResultSVG = styled.svg`
-  /* margin-top:-40vh; */
-  /* height: 100%;
-  width:100%; */
 `
