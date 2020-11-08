@@ -30,7 +30,7 @@ const FlightData = props => {
 
     return (
         <>
-            {!buttonClick ?
+            {!buttonClick?
                 <ol>
                     <MainButton onClick={handleClick} >
                         <p>{props.savedData.departureName}</p>
@@ -80,7 +80,8 @@ function SavedPage() {
         .then(res => {
             setIsLoading(false);
             const filteredData = res.data.filter(id=>id.userName===user.nickname)
-            setSavedData(filteredData);   
+            setSavedData(filteredData);
+            
         })
         .catch((error) => {
             console.log(error);
@@ -103,7 +104,7 @@ function SavedPage() {
 
             {savedDataArr.map(a => {
                 const savedDataId = savedDataArr.find(
-                    (dataUserId) => dataUserId.userId.sub === user.sub
+                    (dataUserId) => dataUserId.userName === user.nickname
                 );
                 console.log(savedDataId)
                 return <FlightData
@@ -111,7 +112,7 @@ function SavedPage() {
                     user={user}
                     key={a._id}
                     deleteData={deleteData}
-                    savedDataId={savedDataId}
+                    
                 />
             })}
         </SavePageMain>}

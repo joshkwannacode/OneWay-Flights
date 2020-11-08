@@ -41,14 +41,16 @@ export default function MainPage(props) {
   const { departureDate } = useContext(IdContext);
   const { destinationCountry, departureCountry } = useContext(IdContext);
   const { user, isAuthenticated } = useAuth0();
-  const userName =()=>{ 
-    if(isAuthenticated===true){return(user.nickname)}
-  else{
-    return(
-      0
-    )
-  };
-}
+  const [userName , setUserName] = useState("");
+//   const userName =()=>{ 
+//     if(isAuthenticated===true){return(user.nickname)}
+//   else{
+//     return(
+//       null
+//     )
+//   };
+// }
+console.log(userName)
   const history = useHistory();
   const userId = () => {
     if (isAuthenticated === true) { return (user.sub) }
@@ -68,6 +70,11 @@ export default function MainPage(props) {
           setQuotesInfo(res.Quotes.map((airport) => airport));
           setCarrierInfo(res.Carriers.map((airport) => airport));
           setIsLoading(false)
+          if(isAuthenticated===true){
+          setUserName(user.nickname);
+          }else{
+            setUserName(null)
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -78,9 +85,16 @@ export default function MainPage(props) {
 
   const onSave = (price, time, carrierName) => {
     if (isAuthenticated === true) {
+      
       axios.post('/savedInfo/save', {
         departureName,
-        price, destinationName, userId, carrierName, time, departureDate, userName
+        price, 
+        destinationName, 
+        userId, 
+        carrierName, 
+        time, 
+        departureDate, 
+        userName,
       })
         .then(res => console.log(res.data))
     } else {
