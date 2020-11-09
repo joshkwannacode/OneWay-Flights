@@ -42,14 +42,7 @@ export default function MainPage(props) {
   const { destinationCountry, departureCountry } = useContext(IdContext);
   const { user, isAuthenticated } = useAuth0();
   const [userName , setUserName] = useState("");
-//   const userName =()=>{ 
-//     if(isAuthenticated===true){return(user.nickname)}
-//   else{
-//     return(
-//       null
-//     )
-//   };
-// }
+
 console.log(userName)
   const history = useHistory();
   const userId = () => {

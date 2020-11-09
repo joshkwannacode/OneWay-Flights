@@ -33,7 +33,7 @@ export const FrontPageH2 = styled.h2`
 export const SearchFlightButton = styled.button`
   position: absolute;
   margin-left: 43.2vw;
-  margin-top: 40vh;
+  margin-top: 230px;
   background: #0a0f39;
   border-radius: 1vw;
   width: 38vw;
@@ -49,6 +49,7 @@ export const SearchFlightButton = styled.button`
     font-size: 3vw;
     width: 30vw;
     margin-left: 51.5vw;
+    margin-top: 270px;
   }
   @media (min-width: 1024px) {
     font-size: 1.1vw;
@@ -77,7 +78,7 @@ export const SearchFlightButton = styled.button`
 //SearchBar
 export const SearchBarBorder = styled.div`
   width: 64vw;
-  height: 32vh;
+  height: 170px;
   background: #0a0f39;
   position: absolute;
   margin-left: 17.5vw;
@@ -115,7 +116,7 @@ export const SearchBarForm = styled.form`
 `;
 
 export const TextArea = styled.textarea`
-  height: 5vh;
+  height: 25px;
   margin-left: 2vw;
   resize: none;
   width: 60vw;
@@ -157,7 +158,7 @@ export const TextAreaLabel = styled.label`
 export const DateInput = styled.input.attrs({
   type: "date",
 })`
-  height: 5vh;
+  height: 25px;
   margin-left: 2vw;
   resize: none;
   width: 60vw;
