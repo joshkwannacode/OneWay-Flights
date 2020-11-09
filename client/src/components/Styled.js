@@ -331,9 +331,9 @@ export const SearchFlightButton = styled.button`
   @media (min-width: 1100px) {
     margin-top: 39vh;
   }
-  @media (min-width: 1400px) {
+  /* @media (min-width: 1400px) {
     margin-top: 36vh;
-  }
+  } */
   @media (min-width: 1600px) {
     margin-top: 45vh;
   }
