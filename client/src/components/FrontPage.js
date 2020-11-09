@@ -30,7 +30,7 @@ function FrontPage() {
       })
       .catch((err) => {
         console.log(err);
-        // history.push("/NoResult");
+        
       });
   };
   const convertDestination = () => {
@@ -44,7 +44,7 @@ function FrontPage() {
       })
       .catch((err) => {
         console.log(err);
-        // history.push("/NoResult");
+        
       });
   };
 
@@ -67,10 +67,7 @@ function FrontPage() {
   const handleSubmit = async (event) => {
     setIsLoading(true);
     const departureName = await convertDeparture();
-    console.log("handleSubmit");
     const destinationName = await convertDestination();
-    console.log(departureName);
-    console.log(destinationName);
     
     if(destinationName===undefined||departureName===undefined){
       history.push("/NoResult")
