@@ -366,7 +366,7 @@ export const SearchBarBorder = styled.div`
     border-radius: 0.3vw;
   }
   @media (min-width: 1100px) {
-    height:80px;
+    height:13vh;
   }
   @media (min-width: 1600px) {
     margin-top: 30vh;
