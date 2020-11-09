@@ -321,15 +321,16 @@ export const SearchFlightButton = styled.button`
     margin-left: 51.5vw;
     margin-top: 270px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-height: 1366px) {
     font-size: 1.1vw;
     width: 8vw;
     border-radius: 0.3vw;
     margin-left: 73.5vw;
     margin-top: 450px;
+    
   }
-  @media (min-width: 1100px) {
-    margin-top: 39vh;
+  @media (min-width: 1024px) {
+    margin-top: 38vh;
   }
   /* @media (min-width: 1400px) {
     margin-top: 36vh;
@@ -366,7 +367,7 @@ export const SearchBarBorder = styled.div`
     border-radius: 0.3vw;
   }
   @media (min-width: 1100px) {
-    height:13vh;
+    height:12vh;
   }
   @media (min-width: 1600px) {
     margin-top: 30vh;
@@ -406,6 +407,9 @@ export const TextArea = styled.textarea`
     font-size: 1.3vw;
     border-radius: 0.3vw;
     margin-top: 1vh;
+  }
+  @media (min-width: 1100px) {
+    height: 4vh;
   }
   @media (min-width: 1440px) {
     font-size: 1.1vw;
@@ -449,6 +453,9 @@ export const DateInput = styled.input.attrs({
     font-size: 1.3vw;
     border-radius: 0.3vw;
     margin-top: 1vh;
+  }
+  @media (min-width: 1100px) {
+    height: 4vh;
   }
   @media (min-width: 1440px) {
     font-size: 1.1vw;
