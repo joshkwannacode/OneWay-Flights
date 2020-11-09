@@ -1,209 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import FrontPageBackGround from "../assets/boat.png";
 import NoResult from "../assets/NoResult.png"
-//Front page
-export const FrontPageMain = styled.div`
-  background-image: url(${FrontPageBackGround});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-`;
 
-export const FrontPageH2 = styled.h2`
-  display: none;
-  @media (min-width: 1024px) {
-    color: white;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    margin-left: 18vw;
-    margin-top: 15vh;
-    font-size: 4vw;
-    font-weight: 350;
-  }
-  @media (min-width: 1180px) {
-    margin-top: 10vh;
-  }
-  @media (min-width: 2200px) {
-    margin-top: 7vh;
-  }
-`;
-export const SearchFlightButton = styled.button`
-  position: absolute;
-  margin-left: 43.2vw;
-  margin-top: 230px;
-  background: #0a0f39;
-  border-radius: 1vw;
-  width: 38vw;
-  height: 5vh;
-  font-size: 5vw;
-  color: white;
-  border: none;
-  cursor:pointer;
-  @media (min-width: 425px) {
-    font-size: 4vw;
-  }
-  @media (min-width: 768px) {
-    font-size: 3vw;
-    width: 30vw;
-    margin-left: 51.5vw;
-    margin-top: 270px;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.1vw;
-    width: 8vw;
-    border-radius: 0.3vw;
-    margin-left: 73.5vw;
-    margin-top: 38vh;
-  }
-  @media (min-width: 1600px) {
-    margin-top: 45vh;
-  }
-  @media (min-width: 1800px) {
-    margin-top: 48vh;
-  }
-  @media (min-width: 2200px) {
-    height: 7vh;
-    font-size: 1vw;
-    margin-top: 50vh;
-  }
-  @media (min-width: 2400px) {
-    height: 5vh;
-    margin-top: 45vh;
-  }
-`;
-
-//SearchBar
-export const SearchBarBorder = styled.div`
-  width: 64vw;
-  height: 170px;
-  background: #0a0f39;
-  position: absolute;
-  margin-left: 17.5vw;
-  margin-top: 7vh;
-  border-radius: 1vw;
-  @media (min-width: 1024px) {
-    height: 12vh;
-    margin-top: 25vh;
-    border-radius: 0.3vw;
-  }
-  @media (min-width: 1600px) {
-    margin-top: 30vh;
-    height: 14vh;
-  }
-  @media (min-width: 1800px) {
-    height: 16vh;
-  }
-  @media (min-width: 2200px) {
-    height: 18vh;
-    margin-top: 30vh;
-  }
-  @media (min-width: 2400px) {
-    height: 14vh;
-    margin-top: 30vh;
-  }
-`;
-
-export const SearchBarForm = styled.form`
-  margin-top: 1vh;
-  @media (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    margin-left: -0.5vw;
-  }
-`;
-
-export const TextArea = styled.textarea`
-  height: 25px;
-  margin-left: 2vw;
-  resize: none;
-  width: 60vw;
-  border-radius: 1vw;
-  @media (min-width: 1024px) {
-    width: 19vw;
-    height: 4vh;
-    font-size: 1.3vw;
-    border-radius: 0.3vw;
-    margin-top: 1vh;
-  }
-  @media (min-width: 1440px) {
-    font-size: 1.1vw;
-  }
-  @media (min-width: 1800px) {
-    height: 5vh;
-  }
-  @media (min-width: 2200px) {
-    height: 6vh;
-  }
-`;
-
-export const TextAreaLabel = styled.label`
-  color: white;
-  font-size: 5vw;
-  margin-left: 2vw;
-
-  @media (min-width: 425px) {
-    font-size: 3vw;
-  }
-  @media (min-width: 768px) {
-    font-size: 2vw;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.3vw;
-  }
-`;
-
-export const DateInput = styled.input.attrs({
-  type: "date",
-})`
-  height: 25px;
-  margin-left: 2vw;
-  resize: none;
-  width: 60vw;
-  border-radius: 1vw;
-  border: none;
-  @media (min-width: 1024px) {
-    width: 19vw;
-    height: 4vh;
-    font-size: 1.3vw;
-    border-radius: 0.3vw;
-    margin-top: 1vh;
-  }
-  @media (min-width: 1440px) {
-    font-size: 1.1vw;
-  }
-  @media (min-width: 1800px) {
-    height: 5vh;
-  }
-  @media (min-width: 2200px) {
-    height: 6vh;
-  }
-`;
-
-export const DateLabel = styled.label`
-  color: white;
-  font-size: 5vw;
-  margin-left: 2vw;
-
-  @media (min-width: 425px) {
-    font-size: 3vw;
-  }
-  @media (min-width: 768px) {
-    font-size: 2vw;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.3vw;
-  }
-`;
-
-export const AreaAndLabel = styled.div`
-  @media (min-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
 //Loading Screen
 const spin = keyframes`
   from {
@@ -473,6 +271,210 @@ export const Price = styled.p`
   }
 `;
 
+//Front page
+export const FrontPageMain = styled.div`
+  background-image: url(${FrontPageBackGround});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+`;
+
+export const FrontPageH2 = styled.h2`
+  display: none;
+  @media (min-width: 1024px) {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18vw;
+    margin-top: 15vh;
+    font-size: 4vw;
+    font-weight: 350;
+  }
+  @media (min-width: 1180px) {
+    margin-top: 10vh;
+  }
+  @media (min-width: 2200px) {
+    margin-top: 7vh;
+  }
+`;
+export const SearchFlightButton = styled.button`
+  position: absolute;
+  margin-left: 43.2vw;
+  margin-top: 230px;
+  background: #0a0f39;
+  border-radius: 1vw;
+  width: 38vw;
+  height: 30px;
+  font-size: 5vw;
+  color: white;
+  border: none;
+  cursor:pointer;
+  @media (min-width: 425px) {
+    font-size: 4vw;
+  }
+  @media (min-width: 768px) {
+    font-size: 3vw;
+    width: 30vw;
+    margin-left: 51.5vw;
+    margin-top: 270px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.1vw;
+    width: 8vw;
+    border-radius: 0.3vw;
+    margin-left: 73.5vw;
+    margin-top: 450px;
+  }
+  @media (min-width: 1600px) {
+    margin-top: 45vh;
+  }
+  @media (min-width: 1800px) {
+    margin-top: 48vh;
+  }
+  @media (min-width: 2200px) {
+    height: 7vh;
+    font-size: 1vw;
+    margin-top: 50vh;
+  }
+  @media (min-width: 2400px) {
+    height: 5vh;
+    margin-top: 45vh;
+  }
+`;
+
+//SearchBar
+export const SearchBarBorder = styled.div`
+  width: 64vw;
+  height: 170px;
+  background: #0a0f39;
+  position: absolute;
+  margin-left: 17.5vw;
+  margin-top: 7vh;
+  border-radius: 1vw;
+  @media (min-width: 1024px) {
+    height: 100px;
+    margin-top: 25vh;
+    border-radius: 0.3vw;
+  }
+  @media (min-width: 1600px) {
+    margin-top: 30vh;
+    height: 14vh;
+  }
+  @media (min-width: 1800px) {
+    height: 16vh;
+  }
+  @media (min-width: 2200px) {
+    height: 18vh;
+    margin-top: 30vh;
+  }
+  @media (min-width: 2400px) {
+    height: 14vh;
+    margin-top: 30vh;
+  }
+`;
+
+export const SearchBarForm = styled.form`
+  margin-top: 1vh;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: -0.5vw;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  height: 25px;
+  margin-left: 2vw;
+  resize: none;
+  width: 60vw;
+  border-radius: 1vw;
+  @media (min-width: 1024px) {
+    width: 19vw;
+    height: 30px;
+    font-size: 1.3vw;
+    border-radius: 0.3vw;
+    margin-top: 1vh;
+  }
+  @media (min-width: 1440px) {
+    font-size: 1.1vw;
+  }
+  @media (min-width: 1800px) {
+    height: 5vh;
+  }
+  @media (min-width: 2200px) {
+    height: 6vh;
+  }
+`;
+
+export const TextAreaLabel = styled.label`
+  color: white;
+  font-size: 5vw;
+  margin-left: 2vw;
+
+  @media (min-width: 425px) {
+    font-size: 3vw;
+  }
+  @media (min-width: 768px) {
+    font-size: 2vw;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.3vw;
+  }
+`;
+
+export const DateInput = styled.input.attrs({
+  type: "date",
+})`
+  height: 25px;
+  margin-left: 2vw;
+  resize: none;
+  width: 60vw;
+  border-radius: 1vw;
+  border: none;
+  @media (min-width: 1024px) {
+    width: 19vw;
+    height: 30px;
+    font-size: 1.3vw;
+    border-radius: 0.3vw;
+    margin-top: 1vh;
+  }
+  @media (min-width: 1440px) {
+    font-size: 1.1vw;
+  }
+  @media (min-width: 1800px) {
+    height: 5vh;
+  }
+  @media (min-width: 2200px) {
+    height: 6vh;
+  }
+`;
+
+export const DateLabel = styled.label`
+  color: white;
+  font-size: 5vw;
+  margin-left: 2vw;
+
+  @media (min-width: 425px) {
+    font-size: 3vw;
+  }
+  @media (min-width: 768px) {
+    font-size: 2vw;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.3vw;
+  }
+`;
+
+export const AreaAndLabel = styled.div`
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 //SavedPage
 
 export const SavePageMain= styled.div`
@@ -663,7 +665,9 @@ border:none;
   margin-left:39vw;
 }
 @media (min-width: 1024px) {
-  margin-top:-25vh;
+  margin-top:-100px;
+  height:20px;
+  font-size:15px;
 }
 @media (min-width: 1200px) {
   font-size: 1.1vw;
@@ -674,29 +678,29 @@ border:none;
 }
 `
 export const NavTextArea = styled.textarea`
-  height: 3vh;
+  height: 20px;
   resize: none;
   width: 60vw;
   border-radius: 1vw;
   position:absolute;
   display:flex;
-  margin-top:-6vw;
+  margin-top:-20px;
   margin-left:19vw;
-  margin-bottom:3vh;
+  margin-bottom:5px;
 
   @media(min-width:768px){
-  margin-top:-2vw;
-  margin-bottom:4vh;
-  height:2vh;
+  margin-top:-20px;
+  margin-bottom:2px;
+  height:20px;
   border-radius: 0.5vw;
 }
   @media (min-width: 1024px) {
     position: static;
     width: 28vw;
-    height: 3vh;
+    height: 30px;
     font-size: 1.3vw;
     border-radius: 0.3vw;
-    margin-top: 1vh;
+    margin-top: 10px;
     margin-left:2vw;
     margin-right:3vw;
   }
@@ -733,29 +737,29 @@ export const NavTextAreaLabel = styled.label`
 export const NavDateInput = styled.input.attrs({
   type: "date",
 })`
-  height: 3vh;
+  height: 20px;
   resize: none;
   width: 60vw;
   border-radius: 1vw;
   border: none;
   position:absolute;
   display:flex;
-  margin-top:-6vw;
+  margin-top:-20px;
   margin-left:19vw;
-  margin-bottom:3vh;
+  margin-bottom:5px;
   @media(min-width:768px){
-    margin-top:-2vw;
-  margin-bottom:4vh;
-  height:2vh;
+  margin-top:-20px;
+  margin-bottom:2px;
+  height:20px;
   border-radius: 0.5vw;
 }
   @media (min-width: 1024px) {
     position: static;
     width: 28vw;
-    height: 3vh;
+    height: 30px;
     font-size: 1.3vw;
     border-radius: 0.3vw;
-    margin-top: 1vh;
+    margin-top: 10px;
     margin-left:2vw;
     margin-right:8vw;
   }
