@@ -673,7 +673,7 @@ border:none;
   font-size: 1.1vw;
   width:10vw;
   height:5vh;
-  margin-top:-35vh;
+  margin-top:-30vh;
   margin-left:43vw;
 }
 `
@@ -703,6 +703,7 @@ export const NavTextArea = styled.textarea`
     margin-top: 10px;
     margin-left:2vw;
     margin-right:3vw;
+    margin-bottom:3vh;
   }
   @media (min-width: 1200px) {
   height:5vh;
